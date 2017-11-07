@@ -1,0 +1,8 @@
+h <- hist(lynx, breaks = 11, freq = FALSE, main = "Histogram of Annual Canadian Lynx Trappings\n 1821-1934", xlab = "Number of Lynx Trapped", col = colors()[226])
+curve(dnorm(x, mean = mean(lynx), sd = sd(lynx)), col = "thistle4", lwd = 2, add = TRUE)
+lines(density(fertility, adjust = 3), col = "darkgreen", iwd = 2)
+rug(fertility, col = "red")
+
+boxplot(USJudgeRatings$RTEN, horizontal = TRUE, col = rgb(100, 100, 240, max = 255))
+boxplot(USJudgeRatings, horizontal = TRUE, col = rgb(150, 150, 240, max = 255))
+boxplot.stats(USJudgeRatings$RTEN)
